@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 const path = require('path');
 
-// Severity levels mapping
+// Severity levels mapping - with damage assessment factors
 const SEVERITY_MAP = {
   pothole: 'High',
   water_leakage: 'High',
@@ -13,7 +13,16 @@ const SEVERITY_MAP = {
   other: 'Low'
 };
 
-// Department routing
+// Damage severity multipliers based on confidence scores
+const CONFIDENCE_SEVERITY_BOOST = {
+  0.95: 1.3,  // Very high confidence → boost severity
+  0.85: 1.2,
+  0.75: 1.1,
+  0.65: 1.0,
+  0.0: 0.8    // Low confidence → lower severity
+};
+
+// Department routing with escalation rules
 const DEPARTMENT_MAP = {
   pothole: 'R&B',
   overflowing_garbage: 'Sanitation',
@@ -21,6 +30,25 @@ const DEPARTMENT_MAP = {
   streetlight_not_working: 'Electrical Dept',
   illegal_dumping: 'Sanitation',
   other: 'General Admin'
+};
+
+// Department escalation matrix
+const DEPARTMENT_ESCALATION = {
+  'R&B': ['City Engineer', 'PWD Chief'],
+  'Sanitation': ['Cleanliness Officer', 'Municipal Commissioner'],
+  'Municipal Water': ['Water Department Head', 'Municipal Commissioner'],
+  'Electrical Dept': ['Chief Electrical Officer', 'Municipal Commissioner'],
+  'General Admin': ['Administrator', 'Municipal Commissioner']
+};
+
+// Time-to-resolve baselines (in hours) - refined based on data
+const RESOLUTION_TIME_MAP = {
+  'pothole|High': 24,
+  'water_leakage|High': 18,
+  'streetlight_not_working|Medium': 48,
+  'overflowing_garbage|Medium': 12,
+  'illegal_dumping|Medium': 36,
+  'other|Low': 72
 };
 
 // Initialize schema
@@ -200,4 +228,12 @@ async function seedData() {
   }
 }
 
-module.exports = { initDb, seedData, SEVERITY_MAP, DEPARTMENT_MAP };
+module.exports = { 
+  initDb, 
+  seedData, 
+  SEVERITY_MAP, 
+  DEPARTMENT_MAP,
+  CONFIDENCE_SEVERITY_BOOST,
+  DEPARTMENT_ESCALATION,
+  RESOLUTION_TIME_MAP
+};
