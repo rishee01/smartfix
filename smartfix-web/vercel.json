@@ -1,0 +1,39 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "backend/dist",
+  "devCommand": "npm run dev",
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "DATABASE_URL": {
+      "description": "Database connection string (optional, defaults to SQLite)",
+      "value": ""
+    },
+    "PORT": {
+      "description": "Port to run server on",
+      "value": "3000"
+    }
+  },
+  "functions": {
+    "backend/server.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/server.js"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "admin/dist/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/index.html"
+    }
+  ]
+}

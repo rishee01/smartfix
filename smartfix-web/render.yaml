@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: civicsense-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm run install:all && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
+    staticSite:
+      buildCommand: npm run build:frontend
+      outputDir: frontend/dist
+      routes:
+        - path: /api
+          rewrite: /backend/server.js
+        - path: /admin
+          rewrite: /admin/dist/index.html
+        - path: /
+          rewrite: /frontend/dist/index.html
+
+  - type: web
+    name: civicsense-admin
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd admin && npm install && npm run build
+    startCommand: npm run dev
+    routes:
+      - path: /admin
+        rewrite: /admin/dist/index.html
