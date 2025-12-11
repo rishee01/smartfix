@@ -1,4 +1,4 @@
-# 📂 SmartFix Complete Directory Tree
+# 📂 CivicSense Complete Directory Tree
 
 ```
 smartfix-web/

@@ -1,8 +1,8 @@
-# 🎉 SmartFix Web - Build Complete!
+# 🎉 CivicSense Web - Build Complete!
 
 ## ✅ Project Successfully Generated
 
-Your complete, production-ready SmartFix civic issue reporting system is ready for the 36-hour national hackathon.
+Your complete, production-ready CivicSense civic issue reporting system is ready for the 36-hour national hackathon.
 
 ---
 
@@ -67,7 +67,7 @@ npm install && npm run dev
 | **Health Check** | http://localhost:5000/health | API status |
 
 **Admin Credentials:**
-- Email: `admin@smartfix.local`
+- Email: `admin@civicsense.local`
 - Password: `admin123`
 
 ---

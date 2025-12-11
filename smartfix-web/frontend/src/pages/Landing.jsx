@@ -3,7 +3,7 @@ export default function Landing() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-20">
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">SmartFix</h1>
+          <h1 className="text-6xl font-bold text-blue-600 mb-4">🏛️ CivicSense</h1>
           <p className="text-2xl text-gray-600 mb-8">Report civic issues. Help your community. Earn rewards.</p>
           <div className="space-x-4">
             <a href="/report" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">

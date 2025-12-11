@@ -1,6 +1,6 @@
-# SmartFix Web - Civic Issue Reporting System
+# 🏛️ CivicSense - Civic Issue Reporting System
 
-A complete, production-ready website for reporting and tracking civic issues (potholes, garbage, water leaks, etc.) with AI-powered image classification, community validation, and gamification.
+A complete, production-ready platform for reporting and tracking civic issues (potholes, garbage, water leaks, etc.) with AI-powered image classification, community validation, and gamification.
 
 ## 🏗️ Project Structure
 

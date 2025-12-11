@@ -20,7 +20,7 @@ export default function App() {
       {/* Sidebar */}
       <div className="w-64 bg-gray-900 text-white">
         <div className="p-6">
-          <h1 className="text-2xl font-bold">🔧 SmartFix Admin</h1>
+          <h1 className="text-2xl font-bold">🏛️ CivicSense Admin</h1>
         </div>
 
         <nav className="mt-8 space-y-2 px-4">

@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#3B82F6"/>
+  
+  <!-- Main building/civic shape -->
+  <path d="M 60 140 L 60 70 L 100 50 L 140 70 L 140 140 Z" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2"/>
+  
+  <!-- Windows -->
+  <rect x="70" y="80" width="10" height="10" fill="#3B82F6" stroke="#1E40AF" stroke-width="1"/>
+  <rect x="86" y="80" width="10" height="10" fill="#3B82F6" stroke="#1E40AF" stroke-width="1"/>
+  <rect x="102" y="80" width="10" height="10" fill="#3B82F6" stroke="#1E40AF" stroke-width="1"/>
+  <rect x="118" y="80" width="10" height="10" fill="#3B82F6" stroke="#1E40AF" stroke-width="1"/>
+  
+  <!-- Door -->
+  <rect x="93" y="125" width="14" height="19" fill="#7C3AED" stroke="#1E40AF" stroke-width="1"/>
+  <circle cx="103" cy="135" r="1.5" fill="#F3F4F6"/>
+</svg>

@@ -1,4 +1,4 @@
-# 🎨 SmartFix Project - Visual Guide for Beginners
+# 🎨 CivicSense Project - Visual Guide for Beginners
 
 ## The 3 Main Parts Explained Simply
 
@@ -12,7 +12,7 @@
 
 ┌─────────────────────────────────┐
 │  🏠 HOME PAGE                   │
-│  Welcome to SmartFix!           │
+│  Welcome to CivicSense!        │
 │  [Report Issue] [View Map]      │
 └─────────────────────────────────┘
          ↓ User clicks "Report Issue"

@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="bg-blue-600 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">🔧 SmartFix</Link>
+        <Link to="/" className="text-2xl font-bold flex items-center gap-2">🏛️ CivicSense</Link>
         <div className="space-x-6">
           <Link to="/" className="hover:bg-blue-700 px-3 py-2 rounded">Home</Link>
           <Link to="/report" className="hover:bg-blue-700 px-3 py-2 rounded">Report Issue</Link>
